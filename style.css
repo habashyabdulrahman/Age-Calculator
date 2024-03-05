@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+}
+
+body {
+    background: #000;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    color: #fff;
+    padding: 10px;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 600px;
+    margin: 5% 0;
+}
+
+.calculator h1 {
+    font-size: 40px;
+    color: #ff5d00;
+}
+
+.input-box {
+    margin: 40px 0;
+    padding: 15px;
+    border-radius: 10px;
+    border: #ff5d00 solid 2px;
+    background: #ffffff27;
+    display: flex;
+    align-items: center;
+}
+
+.input-box input {
+    flex: 1;
+    margin-right: 20px;
+    padding: 14px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.input-box button {
+    background: #ffff76;
+    color: #000000;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 500;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-box input::-webkit-calendar-picker-indicator {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    position: absolute;
+    background-position: calc(100% - 10px);
+    background-size: 30px;
+    cursor: pointer;
+}
+
+.all {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 100vh;
+    padding: 10% 0;
+    background: #ffffff27;
+    border-radius: 5%;
+}
+
+/* <================ Age section ================> */
+.age {
+    display: grid;
+    text-align: left;
+    margin-left: 15%;
+}
+
+.age h2 {
+    margin-top: -30px;
+    font-size: 60px;
+    font-weight: 100;
+}
+
+.age h3 {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.age h3 span {
+    font-size: 6rem;
+    margin-right: 20px;
+    color: #ff5d00;
+}
+
+.age span {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* <================ Next Birth Day section ================> */
+.nextBirthDay div {
+    margin-top: -7rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 100%;
+}
+
+.nextBirthDay::before {
+    content: "";
+    position: relative;
+    top: 100px;
+    right: 50%;
+    transform: rotate(90deg);
+    border: #333537 solid 1px;
+    display: flex;
+    margin: 0 0 90px 0;
+}
+
+.nextBirthDay div h3 {
+    font-size: 25px;
+    font-weight: 100;
+    color: #ff5d00;
+    margin-bottom: 1rem;
+}
+
+.nextBirthDay div img {
+    width: 50px;
+    background-color: #ff5d00;
+    border-radius: 50%;
+    padding: 3px;
+    margin-left: 37%;
+}
+
+.nextBirthDay span {
+    margin-top: 30px;
+}
+
+.nextBirthDay #dayNam {
+    font-size: 30px;
+}
+
+.nextBirthDay #monthsDaysTo {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* <================ Next Birth Day section ================> */
+.summary {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 150px;
+}
+
+.summary::before {
+    content: "";
+    border: #333537 solid 1px;
+    display: flex;
+    margin: 0 15px 20px;
+}
+
+.summary h3 {
+    color: #ff5d00;
+    margin: 30px;
+}
+
+.summary div {
+    display: grid;
+    width: 100%;
+}
+
+.summary .row {
+    width: 200px;
+    height: 90px;
+}
+
+.summary .column:nth-of-type(1) {
+    opacity: 0.8;
+}
+
+.summary .column:nth-of-type(2) {
+    margin-top: -30px;
+}
+
+.summary .row:nth-of-type(1) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.summary .row:nth-of-type(2) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.summary .row:nth-of-type(3) {
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.summary .row .column:nth-of-type(2) {
+    font-size: 35px;
+}
+
+.summary .to .column:nth-of-type(2) {
+    font-size: 20px;
+}
+
+/* <================ Media Query section ================> */
+@media screen and (min-width: 375px) and (max-width: 600px) {
+    .input-box button {
+        padding: 15px;
+    }
+
+    .all {
+        padding-top: 15%;
+    }
+
+    /* <================ Age section ================> */
+    .age h2 {
+        font-size: 45px;
+        margin-bottom: -20px;
+    }
+
+    .age h3 span {
+        font-size: 4rem;
+        margin-right: 10px;
+    }
+
+    .age h3 {
+        font-size: 15px;
+        margin-bottom: -20px;
+    }
+
+    .age span,
+    .nextBirthDay #monthsDaysTo {
+        font-size: 13px;
+    }
+
+    /* <================ Next Birth Day section ================> */
+    .nextBirthDay::before {
+        width: 140%;
+        right: 73%;
+    }
+
+    .nextBirthDay div h3 {
+        font-size: 20px;
+        margin-bottom: -20px;
+    }
+
+    .nextBirthDay #dayNam {
+        font-size: 20px;
+        margin-bottom: -20px;
+    }
+
+    .nextBirthDay span {
+        margin-top: 10px;
+    }
+
+    /* <================ Next Birth Day section ================> */
+    .summary {
+        margin-top: -30px;
+    }
+
+    .summary .row {
+        width: 30px;
+        margin-right: 30px;
+    }
+
+    .summary .row .column:nth-of-type(2) {
+        font-size: 30px;
+    }
+
+    .summary .to .column:nth-of-type(2) {
+        font-size: 15px;
+    }
+}
