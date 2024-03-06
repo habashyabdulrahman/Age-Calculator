@@ -257,9 +257,8 @@ body {
 
     /* <================ Next Birth Day section ================> */
     .nextBirthDay::before {
-        width: 100%;
-        right: 52%;
-        top: 50px;
+        width: 140%;
+        right: 73%;
     }
 
     .nextBirthDay div h3 {
