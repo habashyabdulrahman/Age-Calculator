@@ -224,7 +224,7 @@ body {
 }
 
 /* <================ Media Query section ================> */
-@media screen and (min-width: 375px) and (max-width: 600px) {
+@media screen and (min-width: 300px) and (max-width: 600px) {
     .input-box button {
         padding: 15px;
     }
